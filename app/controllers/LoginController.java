@@ -46,14 +46,14 @@ public Result loginSubmit() {
 
 
     if(loginForm.hasErrors()) {
-        return badRequest(login.render(loginForm));
+        return badRequest(login.render(loginForm,User.getUserById(session().get("email"))));
     }
     else {
 
         session().clear();
 
         session("email",loginForm.get().getEmail());
-}
+          }
        return redirect(controllers.routes.HomeController.index());
 
 }

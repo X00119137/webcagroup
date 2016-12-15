@@ -81,7 +81,7 @@ public Result addProduct() {
   return ok(addProduct.render(addProductForm,getUserFromSession()));
 
 
-
+}
 }
 
 @Transactional
@@ -112,13 +112,16 @@ public Result addProductSubmit() {
  return redirect(controllers.routes.HomeController.product(0));
 
 }
+  
+  //update a product by id
+  //called when edit button is pressed
 
 @Security.Authenticated(Secured.class)
 @Transactional
 
- public Result updateProduct(LOng id ) {
+ public Result updateProduct(LOng id) {
 
- product p;
+ Product p;
  Form<Product>productForm;
 
 try{
@@ -127,6 +130,7 @@ try{
 
    productForm = formFactory.form(Product.class).fill(p);
   } catch (Exception ex) {
+      
    return badRequest("error");
 
 }
@@ -134,3 +138,21 @@ try{
    return ok(addProduct.render(productForm,getUserFromSession()));
 
 }
+
+
+@Security.Authenticated(Secured.class)
+
+@With(AuthAdmin.class)
+
+@Transactional
+
+public Result deleteProduct(Long id) {
+
+    
+} 
+
+
+}
+
+
+
