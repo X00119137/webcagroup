@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(title: String,user:services.Users.User)(content: Html)
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,15 +37,23 @@
        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav js-nav-add-active-class">
-            <li><a href="@routes.HomeController.index()">Home</a></li>
-            <li class="active"><a href="@routes.HomeController.UsedCars()">Used Cars</a></li>
-            <li><a href="@routes.HomeController.Service()">Car Service</a></li>
-            <li><a href="@routes.HomeController.Contact()">Contact Us</a></li>
+            <li @if(title == "Home"){class="active"}>
+            <a href="@routes.HomeController.index()">Home</a></li>
+            <li @if(title== "UsedCars"){class="active"}><a href="@routes.HomeController.UsedCars()">Used Cars</a></li>
+            <li @if(title=="Car Service"){class="active"}> <a href="@routes.HomeController.Service()">Car Service</a></li>
+            <li @if(title=="Contact us"){class ="active"}><a href="@routes.HomeController.Contact()">Contact Us</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="@routes.HomeController.LocateUs()">Locate Us</a></li>
                 <li><a href="@routes.HomeController.AskOurTeam()">Ask Our Team</a></li>
+                <li @if(title == "Login"){class="active"}>
+                  @if(user !=null) {
+                    <a href="@routes.LoginController.logout()">Logout @User.getName() </a>
+
+                  }else {
+                  <a href="@routes.LoginController.login()">Login</a>
+                  }
               </ul>
             </li>
           </ul>

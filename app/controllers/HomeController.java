@@ -46,8 +46,91 @@ public class HomeController extends Controller {
     }
 
 
+ @Security.Authenticated(Secured.class)
+@Transactional
+
+ public Result deleteProduct(Long id) {
+
+  product.find.ref(id).delete();
+
+  flash("succes","product has been deleted");
+
+  return redirect(controllers.routes.HomeController.products(0));
+
+  } 
+
+ private User getUserFromSession() {
+
+ return User.getUserById(session().get("email"));
+
+}
+public Result index() {
+  
+  return ok(index.render(getUserFromSession()));
 
    
   
+}
+
+@Security.Authenticated(Secured.class){
+
+public Result addProduct() {
+
+  Form<Product>addProductForm = formFactory.form(Product.class);
+
+  return ok(addProduct.render(addProductForm,getUserFromSession()));
+
+
+
+}
+
+@Transactional
+ @Security.Authenticated(Secured.class)
+public Result addProductSubmit() {
+
+ Form<Product>newProductForm = formFactory.form(Product.class).bindFromRequest();
+
+ if(newProductForm.hasErrors()) {
+
+ return badRequest(addProduct.render(newProductForm,getUserFRomSession()));
+
+}
+
+  Product p = newProductForm.get();
+
+ if(p.getId() == null) {
+ p.save();
+
+}
+ else if (p.getId()!=null) {
+ p.update();
+
+}
+
+ flash("succes","product" +p.getName()+"has been created/updated");
+
+ return redirect(controllers.routes.HomeController.product(0));
+
+}
+
+@Security.Authenticated(Secured.class)
+@Transactional
+
+ public Result updateProduct(LOng id ) {
+
+ product p;
+ Form<Product>productForm;
+
+try{
+
+   p = Product.find.byId(id);
+
+   productForm = formFactory.form(Product.class).fill(p);
+  } catch (Exception ex) {
+   return badRequest("error");
+
+}
+
+   return ok(addProduct.render(productForm,getUserFromSession()));
 
 }

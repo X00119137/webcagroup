@@ -17,6 +17,11 @@ GET		/Ask						controllers.HomeController.AskOurTeam
 
 GET     /Enquiry					controllers.HomeController.Enquiry
 
+GET     /login                       controllers.LoginController.login
+POST    /loginSubmit                 controllers.LoginController.loginSubmit
+
+GET     /logout                       controllers.LoginController.logout
+
 
 
 

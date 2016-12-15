@@ -1,4 +1,8 @@
-@main("Home"){
+@(user:services.User.user)
+
+
+
+@main("Home",user){
 <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/index.css")">
     <link rel="image" type="image" href="@routes.Assets.versioned("images*")">
 
@@ -63,8 +67,8 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <hr style="border:1px solid #ccc;" />
 <p>We are a supplier of quality used cars located in Belgard Road in County Dublin.</p>
-<p>We are a family run independent car dealership specialising in top quality used cars and light commercials.</p>
-<p>We specialise in providing high quality pre-loved cars and light commercial vehicles. We take pride in sourcing top quality used stock from Ireland, the UK and further afield. All our vehicles come with car history reports and our personal guarantee of their authenticity. They are also covered by a nationwide six month guarantee. If we currently don&#39;t have in stock what you are looking for, please get in touch and we will be happy to help you find your next vehicle. No budget is too big or small.</p>
+<p>We are a family run private car dealership specialising in top quality used cars .</p>
+<p>We specialise in providing high quality pre-loved cars and light commercial vehicles. We take pride in sourcing top quality used stock from Ireland, the UK and further afield. All our vehicles come with car history reports and our personal guarantee of their authenticity. They are also covered by a nationwide six month guarantee. If we currently don&#39;t have in stock what you are looking for, please get in touch and we will be happy to help you find your next vehicle. We dont care if your budget is too big or small.</p>
 <p>A high standard of customer care is particularly important to us both before, during and after the sales process. We believe that when buying a used car all the customer should need to do is find the one, buy the one and drive away with peace of mind. It should not be any more difficult than buying your groceries!</p>
 <center><p><b>Working irregular hours? Don&#39;t have time to call over to view the car? We&#39;ll do our very best to meet you at a location that suits you to facilitate viewing and test drive.</b></p>
 </center>
@@ -110,7 +114,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature grow">
                 <div class="thumbnail">
-                    <img src="assets/images/audia3.jpg" alt="focus">
+                    <img src="assets/images/audiA3.jpg" alt="AudiA3">
                     <div class="item">
                         <h3>AudiA3 Attraction 2007</h3>
                         <p>The A3 series Hatchback from audi</p>
