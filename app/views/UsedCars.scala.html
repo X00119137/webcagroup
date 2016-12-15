@@ -1,0 +1,325 @@
+@main("Home"){
+
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/UsedC.css")">
+	
+    <!-- Page Content -->
+    <div class="container">
+	
+
+
+        <!-- Page Header -->
+		
+       <div class="jumbotron">
+  <h1>Used Cars</h1>
+  <p>Affordable Reliable Local</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+        <!-- /.row -->
+<div class="row">
+          <div class="col-md-6">
+            <div class="home-filter">
+				<h2 class="search-cars-subtitle">Quick Used Car Search <h2>
+				<p>
+				<form id="search-form" action="used-cars.php" method="get">
+						<select id="make_id" name="make_id" onchange="populateTarget('dyn_cars',this,document.getElementById('model_id'),'Any model')"  class="form-control">
+							<option value="">Any make</option>
+<option value="10">BMW</option>
+<option value="26">Ford</option>
+<option value="53">Mercedes-Benz</option>
+<option value="61">Nissan</option>
+<option value="63">Opel</option>
+<option value="72">Renault</option>
+<option value="78">SEAT</option>
+<option value="80">Skoda</option>
+<option value="93">Volkswagen</option>
+
+						</select>
+						<br>
+						<select name="model_id" id="model_id" class="form-control">
+						  <option value="">Any model</option>
+						</select>
+						<br>
+						<select name="price_id" id="price_id"  class="form-control">
+							<option value="">Any price</option>
+<option value="1">&euro;1-&euro;2500</option>
+<option value="2">&euro;2500-&euro;5000</option>
+<option value="3">&euro;5000-&euro;10000</option>
+<option value="4">&euro;10000-&euro;15000</option>
+<option value="5">&euro;15000-&euro;20000</option>
+<option value="6">&euro;20000+</option>
+
+						</select>
+<br>						
+						<div class="clearfix"></div>
+					<div class="row">
+					  <div class="col-md-12">
+						<button type="submit" class="btn btn-warning btn-search-car" name="search_submit" id="search_submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Vehicles</button>
+					  </div>
+					</div>
+			</form>
+            <div class="clearfix"></div>
+            </div></div>
+            
+           <div class="col-md-6"> 
+             <img class="img-responsive" src="http://suimusic.com/wp-content/uploads/2015/04/buy-car-online.png" alt="AudiA3">
+                </a>
+            
+            
+            </div>
+</div>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/JRcAAOSwY45USos9/$_86.JPG" width="700" height="400" alt="AudiA3">
+                </a>
+                <h3>
+                    <a href="#">Audi A3 attraction 1.6 2007</a>
+                </h3>
+               <td>
+							<ul>
+							  <li>Engine: 1.6 Petrol</li>
+							  <li>Year: 2007</li>
+							  <li>Colour: White</li>
+							  <li>Mileage: 56,000 miles / 90,123 kilometers</li>
+							  <li>Owners: 3</li>
+							  <li>Summary:</li></ul>
+							  Bluetooth<br>
+							  Electric mirrors<br>
+							  Anti-Teft System<br>
+							  New NCT<br>
+							  <p class="price">Price: &#8364;2,999</p>
+							
+						</td>	
+
+            </div>     
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                     <img class="img-responsive" src="https://donedeal.akamaized.net/ddimg/MDhhNDgwNDllNTlhMjk1YzBhMWIxZDE2NjZlNzQzNTYXrmQId5V9fLKx5oj4S6qnaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL2RvbmVkZWFsLmllLXBob3Rvcy9waG90b182MzEyMzk4M3x8fDYwMHg2MDB8fHx8fHx8fA==.jpeg" width="700" height="400" alt="Volkswagen Passat 2.0 TDI SE Bluemotion Tech 140PS">
+                </a>
+                <h3>
+                    <a href="#">Volkswagen Passat 2.0 TDI SE Bluemotion Tech 140PS</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 2.0 Petrol</li>
+							  <li>Year: 2012</li>
+							  <li>NCT: June 2017</li>
+							  <li>Mileage: 56,000 miles</li>
+							  <li>Owners: 3</li>
+							  <li>Summary:</li></ul>
+							  New alloys and brake pads<br>
+							  Cruise Control<br>
+							  Full leather seating inside<br>
+							  <p class="price">Price: &#8364;4,999</p>
+							
+						</td>	
+
+               
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://imganuncios.mitula.net/2013_volkswagen_golf_2_0_tdi_gt_150bhpsuperb_quality_used_carsgreat_rate_finance_available_2590123474833241852.jpg" width="700" height="400" alt="2013 Volkswagen Golf 2.0 Tdi Gt">
+                </a>
+                <h3>
+                    <a href="#">2013 Volkswagen Golf 2.0 Tdi Gt</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 1.6 Petrol</li>
+							  <li>Year: 2007</li>
+							  <li>NCT: March 2017</li>
+							  <li>Mileage: 77,200 miles</li>
+							  <li>Owners: 1</li>
+							  <li>Summary:</li></ul>
+							  Electrically adjustable and heated door mirrors<br>
+							  Electronic tyre pressure monitoring<br>
+							  Electronic parking brake with auto hold<br>
+							  Bluetooth Telephone preparation<br>
+							  <p class="price">Price: &#8364;3,999</p>
+							
+						</td>	
+            </div>
+			
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="https://donedeal.akamaized.net/ddimg/ZTRkOGI5MzdkNTE1YTVkMTY4OTJhOTdiNWVhZWZlNmLpktm7K8kxTzG_M5k3xzPGaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL2RvbmVkZWFsLmllLXBob3Rvcy9waG90b182NDE4MjI5M3x8fDYwMHg2MDB8fHx8fHx8fA==.jpeg"
+                    width="700" height="400" alt="2012 White Vauxhall Insignia Elite 'Ecoflex'">
+                </a>
+                <h3>
+                    <a href="#">2012 White Vauxhall Insignia Elite 'Ecoflex</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 2.0 Petrol</li>
+							  <li>Year: 2012</li>
+							  <li>NCT: March 2017</li>
+							  <li>Mileage: 127,000 miles</li>
+							  <li>Owners: 2</li>
+							  <li>Summary:</li></ul>
+							  Navigation system<br>
+							  Lumbar support<br>
+							  Central locking<br>
+							  Alloy wheels<br>
+							  <p class="price">Price: &#8364;5,996</p>
+							
+						</td>
+            </div>
+            
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://thumbs.picclick.com/00/s/MTIwMFgxNjAw/z/~YgAAOSw-itXvFr8/$/2010-Seat-Ibiza-Sport-16-Tdi-Cr-105-_1.jpg"
+                     width="700" height="400" alt="Seat Ibiza Sport, 2010, 1.4, 3 Door">
+                </a>
+                <h3>
+                    <a href="#">Seat Ibiza Sport, 2010, 1.4, 3 Door</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 1.4 Petrol</li>
+							  <li>Year: 2010</li>
+							  <li>NCT: Jul 2017</li>
+							  <li>Mileage: 36,050 miles</li>
+							  <li>Owners: 3</li>
+							  <li>Summary:</li></ul>
+							  Head restraints<br>
+							  3x3 point rear seat belts<br>
+							  Cruise control<br>
+							  Power Steering<br>
+							  <p class="price">Price: &#8364;5,000</p>
+							
+						</td>	
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="https://donedeal.akamaized.net/ddimg/MTZjMDk1MzY1NWFiNDk5NGIwOTQ3NmFlYjhlYjE0OGH1orVl_dvAmNhbDGV6yd9ZaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL2RvbmVkZWFsLmllLXBob3Rvcy9waG90b182NDY3MDMzMXx8fDYwMHg2MDB8fHx8fHx8fA==.jpeg"
+                     width="700" height="400" alt="Ford Focus 2006 1.4">
+                </a>
+                <h3>
+                    <a href="#">Ford Focus 2006 1.4</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 1.4 Petrol</li>
+							  <li>Year: 2006</li>
+							  <li>NCT: Apr 2017</li>
+							  <li>Mileage: 56,000 miles</li>
+							  <li>Owners: 1</li>
+							  <li>Summary:</li></ul>
+							  Auxiliary Jack Input<br>
+							  Onboard Computer<br>
+							  Body Coloured Bumpers<br>
+							  Air Conditioning<br>
+							  <p class="price">Price: &#8364;4,500</p>
+							
+						</td>	
+            </div>
+        </div>
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="https://donedeal.akamaized.net/ddimg/MzljZGFkZjFlMDdiYmQ0NzkwYjU3NWQ4YjcwYTY3MWbA3Dt0MWa2X-84lvHKhdn_aHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL2RvbmVkZWFsLmllLXBob3Rvcy9waG90b182NDY3MDM1Nnx8fDYwMHg2MDB8fHx8fHx8fA==.jpeg"
+                     width="700" height="400" alt="Bmw 320d M Sport Auto">
+                </a>
+                <h3>
+                    <a href="#">Bmw 320d M Sport Auto</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 2.0 Diesel</li>
+							  <li>Year: 2008</li>
+							  <li>NCT: Oct 2017</li>
+							  <li>Mileage: 190,289 miles</li>
+							  <li>Owners: 1</li>
+							  <li>Summary:</li></ul>
+							  Dual Climate Control<br>
+							  Immobilizer<br>
+							  Leather Interior,<br>
+							  Tyre Pressure Monitor<br>
+							  <p class="price">Price: &#8364;5,500</p>
+							
+						</td>	
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="https://donedeal.akamaized.net/ddimg/NTE1NmU2ZjAzNjg4ODE3NzQyZDM2ZDBhNmZlMDdmNDLMuqvW1vKN-virIzTaYxuGaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL2RvbmVkZWFsLmllLXBob3Rvcy9waG90b182NDY3MDE4NXx8fDYwMHg2MDB8fHx8fHx8fA==.jpeg"
+                     width="700" height="400" alt="Nissan Tiida 1.6 SE 4DR Low Kms">
+                </a>
+                <h3>
+                    <a href="#">Nissan Tiida 1.6 SE 4DR Low Kms</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 1.6 Petrol</li>
+							  <li>Year: 2007</li>
+							  <li>NCT: March 2017</li>
+							  <li>Mileage: 139,789 miles</li>
+							  <li>Owners: 3</li>
+							  <li>Summary:</li></ul>
+							  Isofix child seat anchor points<br>
+							  ABS<br>
+							  Child locks<br>
+							  <p class="price">Price: &#8364;3,899</p>
+							
+						</td>	
+            </div>    
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="https://donedeal.akamaized.net/ddimg/NjY3ZTYyZThjYzE4N2EwYjA0OGUyNzllY2ZlOGE5OTAbE0YpaGjgiP8hgXfYKIgiaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL2RvbmVkZWFsLmllLXBob3Rvcy9waG90b182NDY2OTgwNXx8fDYwMHg2MDB8fHx8fHx8fA==.jpeg"
+                     width="700" height="400" alt="Mazda 3 Ts2">
+                </a>
+                <h3>
+                    <a href="#">Mazda 3 Ts2</a>
+                </h3>
+                <td>
+							<ul>
+							  <li>Engine: 1.6 Petrol</li>
+							  <li>Year: 2009</li>
+							  <li>Colour: White</li>
+							  <li>Mileage: 108,005 miles</li>
+							  <li>Owners: 1</li>
+							  <li>Summary:</li></ul>
+							  Sports seats<br>
+							  Metallic paint<br>
+							  Power steering<br>
+							  Traction contro<br>
+							  <p class="price">Price: &#8364;6,785</p>
+							
+						</td>	
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                 
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+}

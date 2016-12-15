@@ -1,0 +1,320 @@
+@main("Home"){
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/index.css")">
+    <link rel="image" type="image" href="@routes.Assets.versioned("images*")">
+
+
+
+
+<div class="container">
+    <!-- Page Content -->
+    <div class="container">
+	<br> <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	      <ol class="carousel-indicators">
+           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+	
+	   <!-- Wrapper for slides -->
+	   
+	      <div class="carousel-inner" role="listbox">
+		   
+          <div class="item active">
+		   <img src ="assets/images/racecar.jpeg" alt="RaceCar" >
+			 </div>
+			 
+			  <div class="item">
+        <img src="assets/images/BMW.jpeg" alt="BMW">
+      </div>
+	  
+	  <div class="item">
+        <img src="assets/images/Audi.jpg" alt="r8" >
+      </div>
+	  
+	   <div class="item">
+        <img src="assets/images/merc.jpg" alt="merc" >
+      </div>
+	  
+	  
+	  
+	  </div>
+			 
+  <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>			 
+			 
+			 
+
+
+        <hr>
+		<h1 class = "text-center">Welcome  to Auto-Sales.</h1>
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<hr style="border:1px solid #ccc;" />
+<p>We are a supplier of quality used cars located in Belgard Road in County Dublin.</p>
+<p>We are a family run independent car dealership specialising in top quality used cars and light commercials.</p>
+<p>We specialise in providing high quality pre-loved cars and light commercial vehicles. We take pride in sourcing top quality used stock from Ireland, the UK and further afield. All our vehicles come with car history reports and our personal guarantee of their authenticity. They are also covered by a nationwide six month guarantee. If we currently don&#39;t have in stock what you are looking for, please get in touch and we will be happy to help you find your next vehicle. No budget is too big or small.</p>
+<p>A high standard of customer care is particularly important to us both before, during and after the sales process. We believe that when buying a used car all the customer should need to do is find the one, buy the one and drive away with peace of mind. It should not be any more difficult than buying your groceries!</p>
+<center><p><b>Working irregular hours? Don&#39;t have time to call over to view the car? We&#39;ll do our very best to meet you at a location that suits you to facilitate viewing and test drive.</b></p>
+</center>
+</div>
+</div>
+</div>
+
+<div class="row">
+            <div class="col-lg-8">
+                <h3>Latest Cars</h3>
+            </div>
+        </div>
+     
+
+    
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature grow">
+                <div class="thumbnail">
+                    <img src="assets/images/Avensis.jpg" alt="Avensis">
+                    <div class="item">
+                        <h3>Toyota Avensis 2010</h3>
+                        <p>The flagship model of toyota</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature grow">
+                <div class="thumbnail">
+                    <img src="assets/images/focus.jpg" alt="Leon">
+                    <div class="item">
+                        <h3>Seat Leon 2013</h3>
+                        <p>The sporty Hatchback from VW Family.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature grow">
+                <div class="thumbnail">
+                    <img src="assets/images/audia3.jpg" alt="focus">
+                    <div class="item">
+                        <h3>AudiA3 Attraction 2007</h3>
+                        <p>The A3 series Hatchback from audi</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature grow">
+                <div class="thumbnail">
+                    <img src="assets/images/A6.jpg" alt="A6">
+                    <div class="item">
+                        <h3>Audi A6 2012</h3>
+                        <p>Audi's Luxury Sedan (full option).</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+   
+
+		
+		<div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="home-filter">
+				<h2 class="search-cars-subtitle">Quick Used Car Search <h2>
+				<p>
+				<form id="search-form" action="used-cars.php" method="get">
+						<select id="make_id" name="make_id" onchange="populateTarget('dyn_cars',this,document.getElementById('model_id'),'Any model')"  class="form-control">
+							<option value="">Any make</option>
+<option value="10">BMW</option>
+<option value="26">Ford</option>
+<option value="53">Mercedes-Benz</option>
+<option value="61">Nissan</option>
+<option value="63">Opel</option>
+<option value="72">Renault</option>
+<option value="78">SEAT</option>
+<option value="80">Skoda</option>
+<option value="93">Volkswagen</option>
+
+						</select>
+						<br>
+						<select name="model_id" id="model_id" class="form-control">
+						  <option value="">Any model</option>
+						</select>
+						<br>
+						<select name="price_id" id="price_id"  class="form-control">
+							<option value="">Any price</option>
+<option value="1">&euro;1-&euro;2500</option>
+<option value="2">&euro;2500-&euro;5000</option>
+<option value="3">&euro;5000-&euro;10000</option>
+<option value="4">&euro;10000-&euro;15000</option>
+<option value="5">&euro;15000-&euro;20000</option>
+<option value="6">&euro;20000+</option>
+
+						</select>
+<br>						
+						<div class="clearfix"></div>
+					<div class="row">
+					  <div class="col-md-12">
+						<button type="submit" class="btn btn-warning btn-search-car" name="search_submit" id="search_submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find Vehicles</button>
+					  </div>
+					</div>
+			</form>
+            <div class="clearfix"></div>
+            </div>
+            </div>
+            </div>
+		
+		<br>
+		
+	  <div class="row text-center">
+
+
+			
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="assets/images/usedcar.jpg" class ="img-thumnail" alt="used">
+                    <div class="item">
+                        <h3>Used Cars</h3>
+                        <p>view our deals.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#"</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="assets/images/sales.jpg" class ="img-thumbnail" alt="sales" >
+                    <div class="item">
+                        <h3>Contact us</h3>
+                        <p>Call us on.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Call Now!</a> <a href="#" </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="assets/images/maps.PNG"  class ="img-thumbnail" alt="maps">
+                    <div class="item">
+                        <h3>Our showroom</h3>
+                        <p>Got a question? Stop in</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Locate Now!</a> <a href="#" </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>	
+		
+		
+
+   
+        
+
+        <hr>
+	
+	
+		
+		<div class="container">
+  <h2>Reviews </h2>
+  <p></p><br>
+  <div class="media">
+    <div class="media-left">
+      <img src="assets/images/john.jpg" class="media-object" style="width:45px">
+    </div>
+	<div class="media-body">
+      <h4 class="images/john.jpg">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+      <p>Bought a car few weeks ago, completely satisfied with the purchase and staff were really friendly.</p>
+	</div>
+  </div>	
+		
+		     
+      <div class="media">
+        <div class="media-left">
+          <img src="assets/images/adam.jpg" class="media-object" style="width:45px">
+        </div>
+        <div class="media-body">
+          <h4 class="assets/images/adam.jpg">Adam Murray <small><i>Posted on September 20, 2016</i></small></h4>
+          <p>The sales representatives were really helpful in checking the previous history checks with car and I'm really excited about the first purchase that I made last month..</p>
+        </div>
+        </div>
+       
+          <div class="media">
+            <div class="media-left">
+              <img src="assets/images/Audrius.jpg" class="media-object" style="width:45px">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Audrius Katiswyski <small><i>Posted on october 21, 2016</i></small></h4>
+              <p>Bought a car for my Daughters Birthday and she is over the moon with car and its condition is just like brand new !! ,Thanks Auto-Sales you guys are the top in Tallaght.</p>
+            </div>
+          </div>
+          
+      
+        
+       
+        <div class="media">
+          <div class="media-left">
+            <img src="assets/images/wayne.jpg" class="media-object" style="width:45px">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Wayne Elliot<small><i>Posted on August  29, 2016</i></small></h4>
+            <p>I was looking for a compact car just for college and work and Auto-Sales 
+			gave my a wonderful fleet to choose over </p>
+          </div>
+        </div>
+        
+     
+    
+  
+    <div class="media">
+      <div class="media-left">
+        <img src="assets/images/samantha.jpg" class="media-samantha" style="width:45px">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">Samantha Daniels <small><i>Posted on February 19, 2016</i></small></h4>
+        <p>Bought the perfect family car last
+		week and the kids loved it </p>
+      </div>
+    </div>
+
+  
+</div>
+	
+		
+
+
+          
+  
+
+    </div>
+	</div>
+    
+    
+	}
